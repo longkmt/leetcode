@@ -1,0 +1,19 @@
+A unit test should:
+
+1. test one method
+2. provide some specific arguments to that method
+3. test that the result is as expected
+
+- Have only one logical assertion per test.
+
+- It should not look inside the method to see what it is doing, so changing the internals should not cause the test to fail.
+
+- You should not directly test that private methods are being called.
+  If you are interested in finding out whether your private code is being tested then use a code coverage tool.
+
+- But don't get obsessed by this: 100% coverage is not a requirement.
+
+- You should not use the method itself (or any of the internal code it uses) to generate the expected result dynamically.
+  The expected result should be hard-coded into your test case so that it does not change when the implementation changes.
+
+- Finally, remember that UNIT TESTING IS NOT ABOUT FINDING BUGS.
