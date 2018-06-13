@@ -1,4 +1,4 @@
-public class DemoBST {
+public class BSTDemo {
 
     public static void main(String[] args){
         Node root = new Node(5);

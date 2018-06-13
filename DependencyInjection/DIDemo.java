@@ -8,7 +8,7 @@ import Mock.TestDatabaseWriter;
 import Mock.TestEmailSender;
 import Mock.TestLogger;
 
-public class DemoDI {
+public class DIDemo {
 
 
     public static void main(String[] args) throws Exception {

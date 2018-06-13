@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Demo {
+public class ComparatorOverriddenDemo {
 
     public static void main(String[] args){
 

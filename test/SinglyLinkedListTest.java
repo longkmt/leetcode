@@ -42,4 +42,13 @@ class SinglyLinkedListTest {
     @Test
     void testToString() {
     }
+
+    @Test
+    void isSorted() {
+    }
+
+    @Test
+    void mergeTwoSortedList() {
+    }
+
 }
