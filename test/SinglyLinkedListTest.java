@@ -5,38 +5,45 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SinglyLinkedListTest {
 
-    private SinglyLinkedList singlyList;
+    private SinglyLinkedList singlyList1;
+    private SinglyLinkedList singlyList2;
 
     @BeforeEach
     void setup(){
-        singlyList = new SinglyLinkedList(1);
-        singlyList.addNode(2);
-        singlyList.addNode(3);
-        singlyList.addNode(4);
-        singlyList.addNode(5);
+        singlyList1 = new SinglyLinkedList(1);
+        singlyList1.addNode(2);
+        singlyList1.addNode(3);
+        singlyList1.addNode(4);
+        singlyList1.addNode(5);
+
+        singlyList2 = new SinglyLinkedList(10);
+        singlyList2.addNode(9);
+        singlyList2.addNode(8);
+        singlyList2.addNode(7);
+        singlyList2.addNode(6);
     }
 
     @Test
     void testGetTail() {
-        assertEquals(5,singlyList.getTail(singlyList.getHead()).getValue());
+        assertEquals(5, singlyList1.getTail(singlyList1.getHead()).getValue());
     }
 
     @Test
     void testGetHead(){
-        assertEquals(1,singlyList.getHead().getValue());
+        assertEquals(1, singlyList1.getHead().getValue());
     }
 
     @Test
     void testAddNode() {
-        singlyList.addNode(6);
-        assertEquals(6,singlyList.getTail(singlyList.getHead()).getValue());
+        singlyList1.addNode(6);
+        assertEquals(6, singlyList1.getTail(singlyList1.getHead()).getValue());
     }
 
     @Test
     void testReverse() {
-        singlyList.reverse();
+        singlyList1.reverse();
         //head should be 5 now if the reversion works correctly
-        assertEquals(5,singlyList.getHead().getValue());
+        assertEquals(5, singlyList1.getHead().getValue());
     }
 
     @Test
@@ -44,11 +51,38 @@ class SinglyLinkedListTest {
     }
 
     @Test
-    void isSorted() {
+    void isSortedTrue() {
+
+        assertTrue(singlyList1.isSorted());
+    }
+
+    @Test
+    void isSortedFalse(){
+
+        assertFalse(singlyList2.isSorted());
     }
 
     @Test
     void mergeTwoSortedList() {
     }
 
+    @Test
+    void mergeTwoSortedList1() {
+    }
+
+    @Test
+    void mergeKSortedLinkedListBruteForce() {
+    }
+
+    @Test
+    void mergeKSortedLinkedListUsingHeap() {
+    }
+
+    @Test
+    void mergeKSortedLinkedListDivideNConquer() {
+    }
+
+    @Test
+    void mergeKSortedLinkedListDivideNConquer1() {
+    }
 }

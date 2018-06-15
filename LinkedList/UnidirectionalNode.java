@@ -1,6 +1,6 @@
 import com.sun.deploy.util.StringUtils;
 
-public class UnidirectionalNode {
+public class UnidirectionalNode implements Comparable {
 
     private UnidirectionalNode nextNode;
 
@@ -32,5 +32,11 @@ public class UnidirectionalNode {
             return String.valueOf(value);
         else
             return String.valueOf(value) + "-->";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        UnidirectionalNode node = (UnidirectionalNode) o;
+        return Integer.compare(this.value,node.getValue());
     }
 }
